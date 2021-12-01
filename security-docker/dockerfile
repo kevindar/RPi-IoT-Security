@@ -1,0 +1,12 @@
+##Security system based on ubuntu 20.04
+FROM ubuntu:20.04
+
+# Adjust Timezone (for correct logging)
+RUN echo "Asia/Jakarta" > /etc/timezone \
+    && dpkg-reconfigure -f noninteractive tzdata
+
+# install packages
+RUN apt update && \
+    apt install -y \
+    wget \
+    build-essential \
