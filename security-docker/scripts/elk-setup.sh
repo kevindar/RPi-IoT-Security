@@ -23,7 +23,7 @@ apt-get -y install oracle-java8-installer
 
 # Setting up Elasticsearch
 
-wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | apt-key add -
 apt-get -y install apt-transport-https
 echo "deb https://artifacts.elastic.co/packages/${ELK_version}/apt stable main" |  tee -a /etc/apt/sources.list.d/elastic-${ELK_version}.list
 apt-get update

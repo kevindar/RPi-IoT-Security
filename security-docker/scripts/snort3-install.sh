@@ -1,7 +1,7 @@
 #!/bin/bash
- apt-get update
+apt-get update
 mkdir ~/snort_src; cd ~/snort_src
- apt-get install -y build-essential autotools-dev libdumbnet-dev \
+apt-get install -y build-essential autotools-dev libdumbnet-dev \
 libluajit-5.1-dev libpcap-dev zlib1g-dev pkg-config libhwloc-dev \
 cmake
 
@@ -16,7 +16,7 @@ tar -xzvf libsafec-02092020.tar.gz
 cd libsafec-02092020.0-g6d921f/
 ./configure
 make
- make install
+make install
 
 # install Hyperscan dependencies
 ## Perl Compatible Regular Expressions
@@ -74,17 +74,34 @@ cd libdaq
 ./bootstrap
 ./configure
 make
- make install
- ldconfig
+make install
+ldconfig
 
 
 cd ~/snort_src
-wget https://github.com/snort3/snort3/archive/refs/tags/3.1.6.0.tar.gz -O snort3
-tar -xzvf snort3-3.1.6.0.tar.gz
+wget https://github.com/snort3/snort3/archive/refs/tags/3.1.9.0.tar.gz -O snort3.tar.gz
+tar -xzvf snort3.tar.gz
 cd snort3
 ./configure_cmake.sh --prefix=/usr/local --enable-tcmalloc
 cd build
 make
- make install
+make install
 echo "Snort version displayed below\n"
 /usr/local/bin/snort -V
+
+# Installing pulledpork for fetching rulesets
+echo "Installing pulledpork\n"
+cd ~/snort_src/
+git clone https://github.com/shirkdog/pulledpork3.git
+
+cd ~/snort_src/pulledpork3
+mkdir /usr/local/bin/pulledpork3
+cp pulledpork.py /usr/local/bin/pulledpork3
+cp -r lib/ /usr/local/bin/pulledpork3
+chmod +x /usr/local/bin/pulledpork3/pulledpork.py
+mkdir /usr/local/etc/pulledpork3
+cp etc/pulledpork.conf /usr/local/etc/pulledpork3/
+# remove the original config file to be replaced
+rm /usr/local/etc/pulledpork3/pulledpork.conf
+
+/usr/local/bin/pulledpork3/pulledpork.py -V
