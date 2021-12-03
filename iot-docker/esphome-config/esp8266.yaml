@@ -1,0 +1,33 @@
+esphome:
+  name: esp8266-livingroom
+  platform: ESP8266
+  board: nodemcuv2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "c3888db20bd60dcb0ca9c0a7eef90755"
+
+wifi:
+  ssid: "Pi_AP"
+  password: "raspberry"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "kons"
+    password: "birumuda04"
+
+captive_portal:
+
+sensor:
+  - platform: dht
+    pin: D7
+    temperature:
+      name: "Living Room Temperature"
+    humidity:
+      name: "Living Room Humidity"
+    update_interval: 60s

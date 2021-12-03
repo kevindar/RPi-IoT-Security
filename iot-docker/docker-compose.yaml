@@ -5,7 +5,7 @@ services:
     container_name: homeassistant
     image: homeassistant/raspberrypi3-homeassistant
     volumes:
-      - ~/homeassistant/config:/config
+      - ./homeassistant-config:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     privileged: true
@@ -21,7 +21,7 @@ services:
     ports:
       - 6052:6052
     volumes:
-      - ./config:/config
+      - ./esphome-config:/config
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
       - /dev/ttyUSB1:/dev/ttyUSB1
