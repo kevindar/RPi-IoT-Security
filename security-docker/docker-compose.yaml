@@ -16,7 +16,7 @@ services:
   cowrie:
     image: easypi/cowrie-arm
     container_name: cowrie
-    command: cowrie start
+    command: start
     ports:
       - "2222:2222"
       - "2223:2223"
