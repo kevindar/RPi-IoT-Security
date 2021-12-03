@@ -24,7 +24,5 @@ services:
       - ./cowrie-data/etc:/cowrie/cowrie-git/etc
       - ./cowrie-data/var:/cowrie/cowrie-git/var
       - ./cowrie-data/log:/cowrie/cowrie-git/log
-    cap_add:
-      - NET_ADMIN
     network_mode: host
     restart: unless-stopped
