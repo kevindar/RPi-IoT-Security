@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: homeassistant/raspberrypi3-homeassistant
+    volumes:
+      - /home/pi/homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - 8123:8123
+    network_mode: bridged
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    privileged: true
+    network_mode: bridged
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    ports:
+      - 6052:6052
+    volumes:
+      - ./config:/config
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    environment:
+      - ESPHOME_DASHBOARD_USE_PING=true
+    restart: always

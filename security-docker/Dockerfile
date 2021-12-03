@@ -5,8 +5,6 @@ FROM ubuntu:20.04
 ENV COWRIE_GROUP=cowrie \
     COWRIE_USER=cowrie 
 
-EXPOSE 80 443
-
 # Adjust Timezone (for correct logging)
 # RUN echo "Asia/Jakarta" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 
