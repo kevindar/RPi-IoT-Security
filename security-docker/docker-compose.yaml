@@ -3,20 +3,26 @@ version: '3'
 services:
   snort:
     image: easypi/snort-arm
-    command: -q -c /etc/snort/snort.conf -y -i eth0
+    container_name: snort
+    command: -T /etc/snort/snort.conf -i wlan0
     volumes:
       - ./snort-data/snort.conf:/etc/snort/snort.conf
+      - ./snort-data/preproc_rules:/etc/snort/preproc_rules
+      - ./snort-data/so_rules:/etc/snort/so_rules
       - ./snort-data/rules:/etc/snort/rules
       - ./snort-data/log:/var/log/snort
     network_mode: host
     restart: unless-stopped
   cowrie:
     image: easypi/cowrie-arm
+    container_name: cowrie
+    command: cowrie start
     ports:
       - "2222:2222"
       - "2223:2223"
     volumes:
       - ./cowrie-data/etc:/cowrie/cowrie-git/etc
       - ./cowrie-data/var:/cowrie/cowrie-git/var
+      - ./cowrie-data/log:/cowrie/cowrie-git/log
     network_mode: host
     restart: unless-stopped
