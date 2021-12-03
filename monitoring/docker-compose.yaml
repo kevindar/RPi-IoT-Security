@@ -49,13 +49,3 @@ services:
     depends_on:
       - elasticsearch
     restart: unless-stopped
-
-  apm-server:
-    image: docker pull store/elastic/apm-server:7.15.2
-    ports:
-      - "8200:8200"
-    volumes:
-      - ./data/apm-server.yml:/usr/share/apm-server/apm-server.yml
-    depends_on:
-      - elasticsearch
-    restart: unless-stopped
