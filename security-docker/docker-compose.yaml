@@ -17,8 +17,8 @@ services:
       - "2222:2222"
       - "2223:2223"
     volumes:
-      - cowrie-etc:/cowrie/cowrie-git/etc
-      - cowrie-var:/cowrie/cowrie-git/var
+      - ~/cowrie/etc:/cowrie/cowrie-git/etc
+      - ~/cowrie/varr:/cowrie/cowrie-git/var
     cap_add:
       - NET_ADMIN
     network_mode: host
