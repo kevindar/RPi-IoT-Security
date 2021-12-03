@@ -3,7 +3,7 @@ version: '3'
 services:
   snort:
     image: easypi/snort-arm
-    container_name: snort
+    container_name: snort-docker
     command: -q -c /etc/snort/snort.conf -y -i wlan0
     volumes:
       - ./snort-data/snort.conf:/etc/snort/snort.conf
@@ -15,8 +15,8 @@ services:
     restart: unless-stopped
   cowrie:
     image: easypi/cowrie-arm
-    container_name: cowrie
-#    command: start -n
+    container_name: cowrie-docker
+    command: start -n
     ports:
       - "2222:2222"
       - "2223:2223"
