@@ -11,12 +11,10 @@ services:
     privileged: true
     ports:
       - 8123:8123
-    network_mode: bridged
   esphome:
     container_name: esphome
     image: esphome/esphome
     privileged: true
-    network_mode: bridged
     dns:
       - 8.8.8.8
       - 8.8.4.4
@@ -26,6 +24,7 @@ services:
       - ./config:/config
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyUSB1:/dev/ttyUSB1
     environment:
       - ESPHOME_DASHBOARD_USE_PING=true
     restart: always

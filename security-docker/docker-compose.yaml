@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  snort:
+    image: easypi/docker-snort
+    volumes:
+      - ./snort-data/snort.conf:/etc/snort/snort.conf
+      - ./snort-data/rules:/etc/snort/rules
+      - ./snort-data/log:/var/log/snort
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    restart: unless-stopped
+  cowrie:
+    image: easypi/cowrie-arm
+    ports:
+      - "2222:2222"
+      - "2223:2223"
+    volumes:
+      - cowrie-etc:/cowrie/cowrie-git/etc
+      - cowrie-var:/cowrie/cowrie-git/var
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    restart: unless-stopped
