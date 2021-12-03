@@ -4,7 +4,7 @@ services:
   snort:
     image: easypi/snort-arm
     container_name: snort
-    command: -T /etc/snort/snort.conf -i wlan0
+#    command: -T -c /etc/snort/snort.conf -y -i wlan0
     volumes:
       - ./snort-data/snort.conf:/etc/snort/snort.conf
       - ./snort-data/preproc_rules:/etc/snort/preproc_rules
@@ -18,7 +18,7 @@ services:
   cowrie:
     image: easypi/cowrie-arm
     container_name: cowrie
-    command: start
+#    command: start 
     ports:
       - "2222:2222"
       - "2223:2223"
