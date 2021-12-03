@@ -3,6 +3,7 @@ version: "3.8"
 services:
 
   elasticsearch:
+    container_name: elasticsearch
     image: elasticsearch:7.14.2
     ports:
       - "9200:9200"
@@ -22,6 +23,7 @@ services:
     restart: unless-stopped
 
   logstash:
+    container_name: logstash
     image: logstash:7.14.2
     ports:
       - "5044:5044"
@@ -40,6 +42,7 @@ services:
     restart: unless-stopped
 
   kibana:
+    container_name: kibana
     image: kibana:7.14.2
     ports:
       - "5601:5601"
