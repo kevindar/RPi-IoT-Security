@@ -15,11 +15,9 @@ services:
     container_name: esphome
     image: esphome/esphome
     privileged: true
-    dns:
-      - 8.8.8.8
-      - 8.8.4.4
     ports:
       - 6052:6052
+      - 5533:53
     volumes:
       - ./esphome-config:/config
     devices:
