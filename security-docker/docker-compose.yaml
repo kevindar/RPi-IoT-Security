@@ -13,7 +13,10 @@ services:
   cowrie:
     image: armedpot/cowrie
     container_name: cowrie-docker
-    command: sh -c "find /home/cowrie/cowrie-git/bin -type f -exec sed -i.bak "s/bash/sh/g" {} \;"
+    entrypoint: 
+      - sh 
+      - -c 
+      - "find /home/cowrie/cowrie-git/bin -type f -exec sed -i "s/bash/sh/g" {} \;"
     ports:
       - "2222:2222"
       - "2223:2223"
