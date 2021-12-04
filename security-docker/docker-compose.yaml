@@ -4,7 +4,7 @@ services:
   snort:
     image: easypi/snort-arm
     container_name: snort-docker
-    command: snort -T -c /etc/snort/snort.conf
+    command: snort -T -c /etc/snort/snort.conf -i wlan0
     volumes:
       - ./snort-data:/etc/snort
       - ./snort-data/log:/var/log/snort
