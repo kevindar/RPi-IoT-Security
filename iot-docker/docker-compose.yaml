@@ -31,4 +31,4 @@ services:
       - ESPHOME_DASHBOARD_USE_PING=true
     restart: always
 networks:
-  - iot_net: {}
+  iot_net: {}
