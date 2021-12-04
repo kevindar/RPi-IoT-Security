@@ -16,4 +16,5 @@ root:x:root
 root:x:!123456
 root:x:!/honeypot/i
 pi:x:raspberry
+pi:x:^(?=.*\d)(?=.*[A-Za-z])[A-Za-z0-9]{1,10}$
 admin:x:admin
