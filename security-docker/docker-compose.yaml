@@ -14,7 +14,7 @@ services:
     image: armedpot/cowrie
     container_name: cowrie-docker
     build: ./cowrie-data
-    command: bash -c "./bin/cowrie start"
+    command: sh -c "cat ./bin/cowrie"
     ports:
       - "2222:2222"
       - "2223:2223"
