@@ -6,10 +6,7 @@ services:
     container_name: snort-docker
     command: -q -c /etc/snort/snort.conf -y -i wlan0
     volumes:
-      - ./snort-data/snort.conf:/etc/snort/snort.conf
-      - ./snort-data/preproc_rules:/etc/snort/preproc_rules
-      - ./snort-data/so_rules:/etc/snort/so_rules
-      - ./snort-data/rules:/etc/snort/rules
+      - ./snort-data:/etc/snort
       - ./snort-data/log:/var/log/snort
     network_mode: host
     restart: unless-stopped
@@ -19,10 +16,10 @@ services:
     command: start -n
     ports:
       - "2222:2222"
-      - "2223:2223"
+      - "23:2223"
+    env_file:
+      - ./cowrie-data/env/cowrie.env
     volumes:
-      - ./cowrie-data/etc:/cowrie/cowrie-git/etc
-      - ./cowrie-data/var:/cowrie/cowrie-git/var
-      - ./cowrie-data/log:/cowrie/cowrie-git/log
+      - ./cowrie-data/etc:/etc/cowrie
     network_mode: host
     restart: unless-stopped

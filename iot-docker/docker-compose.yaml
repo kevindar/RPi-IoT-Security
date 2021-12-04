@@ -2,8 +2,6 @@ version: '3'
 
 services:
   homeassistant:
-    #    networks:
-    #      - iot_net
     container_name: homeassistant
     image: homeassistant/raspberrypi3-homeassistant
     volumes:
@@ -14,8 +12,6 @@ services:
     ports:
       - 8123:8123
   esphome:
-    #    networks:
-    #    - iot_net
     container_name: esphome
     image: esphome/esphome
     privileged: true
@@ -30,5 +26,3 @@ services:
     environment:
       - ESPHOME_DASHBOARD_USE_PING=true
     restart: always
-      #networks:
-      #  iot_net: {}
