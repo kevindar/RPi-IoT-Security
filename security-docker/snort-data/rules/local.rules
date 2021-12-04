@@ -19,3 +19,5 @@
 # LOCAL RULES
 #-------------
 
+alert icmp any any -> 192.168.1.105 any (msg: “NMAP ping sweep Scan”; dsize:0;sid:10000004; rev: 1; )
+alert tcp any any -> 192.168.1.105 22 (msg: “NMAP TCP Scan”;sid:10000005; rev:2; )
