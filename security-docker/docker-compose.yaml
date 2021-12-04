@@ -18,6 +18,6 @@ services:
       - "2222:2222"
       - "2223:2223"
     volumes:
-      - ./cowrie-data/etc:/home/cowrie/cowrie-git/etc
+      - ./cowrie-data/logs:/home/cowrie/cowrie-git/var/log/cowrie
     network_mode: host
     restart: unless-stopped
