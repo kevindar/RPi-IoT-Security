@@ -11,15 +11,14 @@ services:
     network_mode: host
     restart: unless-stopped
   cowrie:
-    image: stingar/cowrie
+    image: armedpot/cowrie
     container_name: cowrie-docker
-    command: start -n
+    command: sh -c "find ./bin -type f -exec sed -i.bak "s/bash/sh/g" {} \;"
     ports:
       - "2222:2222"
-      - "23:2223"
-    env_file:
-      - ./cowrie-data/env/cowrie.env
+      - "2223:2223"
     volumes:
-      - ./cowrie-data/etc:/etc/cowrie
+      - ./cowrie-data/etc:~/cowrie-git/etc
+      - ./cowrie-data/var:~/cowrie-git/var
     network_mode: host
     restart: unless-stopped
