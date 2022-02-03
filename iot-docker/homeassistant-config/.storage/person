@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "minor_version": 1,
+    "key": "person",
+    "data": {
+        "items": [
+            {
+                "name": "Kevin Darmawan",
+                "user_id": "d38bba191d6b4011bb85d67cb9ac5b66",
+                "device_trackers": [],
+                "id": "kevin_darmawan",
+                "picture": null
+            },
+            {
+                "name": "Brotiekevin",
+                "device_trackers": [],
+                "user_id": "58bbc61273f34526bf4949c19c75f55b",
+                "picture": null,
+                "id": "kevin"
+            }
+        ]
+    }
+}

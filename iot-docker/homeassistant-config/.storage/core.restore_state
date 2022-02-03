@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "core.restore_state",
+    "data": [
+        {
+            "state": {
+                "entity_id": "person.kevin_darmawan",
+                "state": "unknown",
+                "attributes": {
+                    "editable": false,
+                    "id": "kevin_darmawan",
+                    "user_id": "d38bba191d6b4011bb85d67cb9ac5b66",
+                    "friendly_name": "Kevin Darmawan"
+                },
+                "last_changed": "2022-01-07T03:47:25.207726+00:00",
+                "last_updated": "2022-01-07T03:47:32.562651+00:00",
+                "context": {
+                    "id": "2b98a86f68305f92bb4d5df332c0bf02",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-02-03T08:02:36.825364+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "person.kevin",
+                "state": "unknown",
+                "attributes": {
+                    "editable": false,
+                    "id": "kevin",
+                    "user_id": "58bbc61273f34526bf4949c19c75f55b",
+                    "friendly_name": "Brotiekevin"
+                },
+                "last_changed": "2022-01-07T03:47:25.208391+00:00",
+                "last_updated": "2022-01-07T03:47:32.563007+00:00",
+                "context": {
+                    "id": "af0fec7f3f9bf97c4ebcb405cafa7d9f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-02-03T08:02:36.825364+00:00"
+        }
+    ]
+}

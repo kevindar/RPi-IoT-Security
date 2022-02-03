@@ -1,0 +1,60 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.living_room_temperature",
+                                    "name": "Temperature"
+                                },
+                                {
+                                    "entity": "sensor.living_room_humidity",
+                                    "name": "Humidity"
+                                }
+                            ],
+                            "title": "Living Room"
+                        },
+                        {
+                            "type": "grid",
+                            "square": true,
+                            "columns": 3,
+                            "cards": [
+                                {
+                                    "type": "picture-entity",
+                                    "entity": "person.kevin_darmawan",
+                                    "aspect_ratio": "1",
+                                    "show_name": false,
+                                    "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' style='background-color:%23b3e5fC'%3E%3Cg%3E%3Ctext font-family='roboto' x='50%25' y='50%25' text-anchor='middle' stroke='%23212121' font-size='1.3em' dy='.3em'%3EKD%3C/text%3E%3C/g%3E%3C/svg%3E"
+                                },
+                                {
+                                    "type": "picture-entity",
+                                    "entity": "person.kevin",
+                                    "aspect_ratio": "1",
+                                    "show_name": false,
+                                    "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' style='background-color:%23b3e5fC'%3E%3Cg%3E%3Ctext font-family='roboto' x='50%25' y='50%25' text-anchor='middle' stroke='%23212121' font-size='1.3em' dy='.3em'%3EB%3C/text%3E%3C/g%3E%3C/svg%3E"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "binary_sensor.updater"
+                            ],
+                            "title": "Binary sensor"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

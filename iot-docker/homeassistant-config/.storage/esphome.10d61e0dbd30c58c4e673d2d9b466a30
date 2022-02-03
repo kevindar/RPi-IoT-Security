@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "esphome.10d61e0dbd30c58c4e673d2d9b466a30",
+    "data": {
+        "device_info": {
+            "uses_password": false,
+            "name": "esp8266-livingroom",
+            "mac_address": "80:7D:3A:44:63:7A",
+            "compilation_time": "Dec  4 2021, 08:43:02",
+            "model": "nodemcuv2",
+            "has_deep_sleep": false,
+            "esphome_version": "2021.11.4",
+            "project_name": "",
+            "project_version": "",
+            "webserver_port": 0
+        },
+        "services": [],
+        "api_version": {
+            "major": 1,
+            "minor": 6
+        },
+        "sensor": [
+            {
+                "object_id": "living_room_temperature",
+                "key": 1578816251,
+                "name": "Living Room Temperature",
+                "unique_id": "esp8266-livingroomsensorliving_room_temperature",
+                "disabled_by_default": false,
+                "icon": "",
+                "entity_category": 0,
+                "device_class": "temperature",
+                "unit_of_measurement": "\u00b0C",
+                "accuracy_decimals": 1,
+                "force_update": false,
+                "state_class": 1,
+                "last_reset_type": 0
+            },
+            {
+                "object_id": "living_room_humidity",
+                "key": 560453828,
+                "name": "Living Room Humidity",
+                "unique_id": "esp8266-livingroomsensorliving_room_humidity",
+                "disabled_by_default": false,
+                "icon": "",
+                "entity_category": 0,
+                "device_class": "humidity",
+                "unit_of_measurement": "%",
+                "accuracy_decimals": 0,
+                "force_update": false,
+                "state_class": 1,
+                "last_reset_type": 0
+            }
+        ],
+        "text_sensor": []
+    }
+}
