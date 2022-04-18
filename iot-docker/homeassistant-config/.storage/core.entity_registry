@@ -1,0 +1,113 @@
+{
+    "version": 1,
+    "minor_version": 4,
+    "key": "core.entity_registry",
+    "data": {
+        "entities": [
+            {
+                "area_id": null,
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "binary_sensor.updater",
+                "icon": null,
+                "id": "fbf175cb765d89e62b14cc671612f1e1",
+                "name": null,
+                "original_device_class": "update",
+                "original_icon": null,
+                "original_name": "Updater",
+                "platform": "updater",
+                "supported_features": 0,
+                "unique_id": "updater",
+                "unit_of_measurement": null
+            },
+            {
+                "area_id": null,
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "person.kevin_darmawan",
+                "icon": null,
+                "id": "ae8402fc4063ccfb1e703f28c8f4561b",
+                "name": null,
+                "original_device_class": null,
+                "original_icon": null,
+                "original_name": "Kevin Darmawan",
+                "platform": "person",
+                "supported_features": 0,
+                "unique_id": "kevin_darmawan",
+                "unit_of_measurement": null
+            },
+            {
+                "area_id": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "config_entry_id": "10d61e0dbd30c58c4e673d2d9b466a30",
+                "device_class": null,
+                "device_id": "e995e2a918448fd719da49c160f082b7",
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "sensor.living_room_temperature",
+                "icon": null,
+                "id": "77834367750ac09d9833a22670950273",
+                "name": null,
+                "original_device_class": "temperature",
+                "original_icon": null,
+                "original_name": "Living Room Temperature",
+                "platform": "esphome",
+                "supported_features": 0,
+                "unique_id": "esp8266-livingroomsensorliving_room_temperature",
+                "unit_of_measurement": "\u00b0C"
+            },
+            {
+                "area_id": null,
+                "capabilities": {
+                    "state_class": "measurement"
+                },
+                "config_entry_id": "10d61e0dbd30c58c4e673d2d9b466a30",
+                "device_class": null,
+                "device_id": "e995e2a918448fd719da49c160f082b7",
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "sensor.living_room_humidity",
+                "icon": null,
+                "id": "13d47e10f95f0962616f2f5e6943a297",
+                "name": null,
+                "original_device_class": "humidity",
+                "original_icon": null,
+                "original_name": "Living Room Humidity",
+                "platform": "esphome",
+                "supported_features": 0,
+                "unique_id": "esp8266-livingroomsensorliving_room_humidity",
+                "unit_of_measurement": "%"
+            },
+            {
+                "area_id": null,
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_category": null,
+                "entity_id": "person.kevin",
+                "icon": null,
+                "id": "1818b2e04aadc1328d51e4c997e4e2d3",
+                "name": null,
+                "original_device_class": null,
+                "original_icon": null,
+                "original_name": "Brotiekevin",
+                "platform": "person",
+                "supported_features": 0,
+                "unique_id": "kevin",
+                "unit_of_measurement": null
+            }
+        ]
+    }
+}

@@ -15,10 +15,33 @@ services:
     container_name: cowrie-docker
     build: ./cowrie-data
     ports:
-      - "2222:2222"
-      - "2223:2223"
+      - 2222:2222
+      - 2223:2223
     volumes:
       - ./cowrie-data/etc:/home/cowrie/cowrie-git/etc
       - ./cowrie-data/logs:/home/cowrie/cowrie-git/var/log/cowrie
-    network_mode: host
+    restart: unless-stopped
+  dionaea:
+    image: pi-dionaea:0.10
+    container_name: dionaea1
+    ports:
+      - 2211:21 
+      - 4422:42 
+      - 69:69/udp 
+      - 8800:80 
+      - 135:135 
+      - 4443:443 
+      - 4445:445 
+      - 1433:1433 
+      - 1723:1723 
+      - 1883:1883 
+      - 1900:1900/udp 
+      - 33066:3306 
+      - 5060:5060 
+      - 5060:5060/udp 
+      - 5061:5061 
+      - 11211:11211
+    volumes:
+      - ./dionea-data/supervisor:/etc/supervisor/conf.d
+      - ./dionaea-data/conf:/opt/dionaea/etc/dionaea
     restart: unless-stopped

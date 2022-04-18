@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "core.config_entries",
+    "data": {
+        "entries": [
+            {
+                "entry_id": "10d61e0dbd30c58c4e673d2d9b466a30",
+                "version": 1,
+                "domain": "esphome",
+                "title": "esp8266-livingroom",
+                "data": {
+                    "host": "192.168.10.113",
+                    "port": 6053,
+                    "password": "",
+                    "noise_psk": ""
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
+            }
+        ]
+    }
+}

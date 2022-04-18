@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "minor_version": 2,
+    "key": "core.device_registry",
+    "data": {
+        "devices": [
+            {
+                "config_entries": [
+                    "10d61e0dbd30c58c4e673d2d9b466a30"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "80:7d:3a:44:63:7a"
+                    ]
+                ],
+                "identifiers": [],
+                "manufacturer": "espressif",
+                "model": "nodemcuv2",
+                "name": "esp8266-livingroom",
+                "sw_version": "2021.11.4 (Dec  4 2021, 08:43:02)",
+                "entry_type": null,
+                "id": "e995e2a918448fd719da49c160f082b7",
+                "via_device_id": null,
+                "area_id": "living_room",
+                "name_by_user": null,
+                "disabled_by": null,
+                "configuration_url": null
+            }
+        ],
+        "deleted_devices": []
+    }
+}
